@@ -15,6 +15,16 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('exercise', function () {
-    return view('exercise');
+Route::get('home', function () {
+    return view('home');
+});
+
+Route::get('cards', function () {
+	$cards = DB::table('cards')->get();
+	return view('cards.index', compact('cards'));
+});
+
+Route::get('cards/{card}', function ($id) {
+	$card = DB::table('cards')->find($id);
+	return view('cards.show', compact('card'));
 });

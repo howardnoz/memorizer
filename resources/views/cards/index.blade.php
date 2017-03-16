@@ -40,10 +40,11 @@
 
 		<form>
 			<?php foreach($cards as $card) : ?>
-				<div>
-					<input type="text" value="{{ $card->content }}" />
-				</div>
+				<div>{{ $card->title }}</div>
+				<div>{{ $card->content }}</div>
+			<br />
 			<?php endforeach; ?>
+			<br />
 			<div>
 				<input type="submit" />
 			</div>
