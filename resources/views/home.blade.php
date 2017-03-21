@@ -34,7 +34,7 @@
 
                 <div class="links">
                     <a href="#">Home</a>
-                    <a href="exercise">Exercise</a>
+                    <a href="cards">Exercise</a>
                 </div>
             </div>
         </div>
