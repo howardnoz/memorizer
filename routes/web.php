@@ -21,6 +21,7 @@ Route::get('home', function () {
 
 Route::get('cards', function () {
 	$cards = DB::table('cards')->get();
+	$cards = App\Cards::all();
 	return view('cards.index', compact('cards'));
 });
 
