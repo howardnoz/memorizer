@@ -24,7 +24,7 @@ Route::get('exercise', function () {
 });
 
 Route::get('cards', function () {
-	$cards = App\Cards::all();
+	$cards = App\Card::all();
 	return view('cards.index', compact('cards'));
 });
 
