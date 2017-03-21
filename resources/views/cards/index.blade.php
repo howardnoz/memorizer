@@ -28,7 +28,8 @@
 				<a href="{{ url('/home') }}">Home</a>
 			@endif
 
-			<a href="{{ url('/cards') }}">Exercise</a>
+			<a href="{{ url('/cards') }}">Library</a>
+			<a href="{{ url('/exercise') }}">Exercise</a>
                 </div>
 
             <div class="content">

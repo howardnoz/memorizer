@@ -28,6 +28,7 @@
 				<a href="{{ url('/home') }}">Home</a>
 			@endif
 
+			<a href="{{ url('/cards') }}">Library</a>
 			<a href="{{ url('/exercise') }}">Exercise</a>
                 </div>
 
@@ -39,11 +40,6 @@
 		<br />
 
 		<form>
-			<?php foreach($cards as $card) : ?>
-				<div>
-					<input type="text" value="{{ $card->content }}" />
-				</div>
-			<?php endforeach; ?>
 			<div>
 				<input type="submit" />
 			</div>

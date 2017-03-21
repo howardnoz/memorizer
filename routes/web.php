@@ -19,6 +19,10 @@ Route::get('home', function () {
     return view('home');
 });
 
+Route::get('exercise', function () {
+	return view('exercise' );
+});
+
 Route::get('cards', function () {
 	$cards = App\Cards::all();
 	return view('cards.index', compact('cards'));
