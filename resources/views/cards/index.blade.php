@@ -34,7 +34,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-			May force be with you...
+			Shhh... Library this is	
                 </div>
 
 		<br />
