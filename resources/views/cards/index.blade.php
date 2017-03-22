@@ -7,17 +7,20 @@
 
 	<br />
 
-	<form>
-		<?php foreach($cards as $card) : ?>
-			<div>{{ $card->title }}</div>
-			<div>{{ $card->content }}</div>
-			<br />
-		<?php endforeach; ?>
-
+	<?php foreach($cards as $card) : ?>
+		<div>{{ $card->title }}</div>
+		<div>{{ $card->content }}</div>
 		<br />
+	<?php endforeach; ?>
 
-		<div>
-			<input type="submit" />
-		</div>
+	<form method="POST" action="/cards">
+		{{ csrf_field() }}
+
+		<label for="title">Title</label>
+		<input type="text" class="form-control" id="title" name="title" />
+		<label for="content">Content</label>
+		<input type="text" class="form-control" id="content" name="content" />
+
+		<input type="submit" value-"Create"/>
 	</form>
 @endsection 
