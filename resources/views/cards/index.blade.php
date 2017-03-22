@@ -21,19 +21,3 @@
 		</div>
 	</form>
 @endsection 
-
-@section('top-right-links')
-	@if (Route::has('login'))
-		@if (Auth::check())
-			<a href="{{ url('/home') }}">Home</a>
-		@else
-			<a href="{{ url('/login') }}">Login</a>
-			<a href="{{ url('/register') }}">Register</a>
-		@endif
-	@else 
-		<a href="{{ url('/home') }}">Home</a>
-	@endif
-
-	<a href="{{ url('/cards') }}">Library</a>
-	<a href="{{ url('/exercise') }}">Exercise</a>
-@endsection 
