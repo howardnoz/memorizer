@@ -23,12 +23,6 @@ Route::get('exercise', function () {
 	return view('exercise' );
 });
 
-Route::get('cards', function () {
-	$cards = App\Card::all();
-	return view('cards.index', compact('cards'));
-});
+Route::get('cards', 'CardsController@index'); 
+Route::get('cards/{card}', 'CardsController@show'); 
 
-Route::get('cards/{card}', function ($id) {
-	$card = DB::table('cards')->find($id);
-	return view('cards.show', compact('card'));
-});
