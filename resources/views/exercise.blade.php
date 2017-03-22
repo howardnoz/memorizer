@@ -1,51 +1,21 @@
-<!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout')
 
-        <title>Memorizer</title>
+@section('content')
+	<div class="title m-b-md">
+		May force be with you...
+	</div>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+	<br />
 
-        <!-- Styles -->
-        <link href="{{ url('/css/home.css') }}" rel="stylesheet" type="text/css">
+	<form>
+		<div>
+			<input type="submit" />
+		</div>
+	</form>
+@endsection
 
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-		<div class="top-right links">
-			@if (Route::has('login'))
-				@if (Auth::check())
-					<a href="{{ url('/home') }}">Home</a>
-				@else
-					<a href="{{ url('/login') }}">Login</a>
-					<a href="{{ url('/register') }}">Register</a>
-				@endif
-			@else 
-				<a href="{{ url('/home') }}">Home</a>
-			@endif
-
-			<a href="{{ url('/cards') }}">Library</a>
-			<a href="{{ url('/exercise') }}">Exercise</a>
-                </div>
-
-            <div class="content">
-                <div class="title m-b-md">
-			May force be with you...
-                </div>
-
-		<br />
-
-		<form>
-			<div>
-				<input type="submit" />
-			</div>
-		</form>
-
-            </div>
-        </div>
-    </body>
-</html>
+@section('top-right-links')
+	<a href="{{ url('/home') }}">Home</a>
+	<a href="{{ url('/cards') }}">Library</a>
+	<a href="{{ url('/exercise') }}">Exercise</a>
+@endsection
