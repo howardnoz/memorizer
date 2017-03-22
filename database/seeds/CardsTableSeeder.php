@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Cards;
+use App\Card;
 
 class CardsTableSeeder extends Seeder
 {
@@ -9,9 +9,9 @@ class CardsTableSeeder extends Seeder
     {
 	// DB::table('cards')->
 
-        Cards::create(['title'=>'aberration', 'content'=>'deviation, not normal']);
-        Cards::create(['title'=>'abstruse', 'content'=>'difficult to understand']);
-        Cards::create(['title'=>'accost', 'content'=>'confront']);
-        Cards::create(['title'=>'acrimony', 'content'=>'bitter animosity']);
+        Card::create(['title'=>'aberration', 'content'=>'deviation, not normal']);
+        Card::create(['title'=>'abstruse', 'content'=>'difficult to understand']);
+        Card::create(['title'=>'accost', 'content'=>'confront']);
+        Card::create(['title'=>'acrimony', 'content'=>'bitter animosity']);
     }
 }
