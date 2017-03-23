@@ -36,6 +36,10 @@ class CardsController extends Controller
      */
     public function store(Request $request)
     {
+	$this->validate(request(), [
+		'title' => 'required',
+		'content' => 'required'
+	]);
 	Card::create(request(['title', 'content']));
 	return redirect('/cards');
     }

@@ -17,10 +17,12 @@
 		{{ csrf_field() }}
 
 		<label for="title">Title</label>
-		<input type="text" class="form-control" id="title" name="title" />
+		<input type="text" class="form-control" id="title" name="title" required />
 		<label for="content">Content</label>
-		<input type="text" class="form-control" id="content" name="content" />
+		<input type="text" class="form-control" id="content" name="content" required />
 
 		<input type="submit" value-"Create"/>
 	</form>
+	
+	@include('layouts.errors')
 @endsection 
