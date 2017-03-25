@@ -19,9 +19,8 @@ Route::get('home', function () {
     return view('home');
 });
 
-Route::get('exercise', function () {
-	return view('exercise' );
-});
+Route::get('exercise', 'ExerciseController@index');
+Route::post('exercise', 'ExerciseController@test');
 
 Route::get('cards', 'CardsController@index'); 
 Route::get('cards/{card}', 'CardsController@show'); 

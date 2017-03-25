@@ -21,7 +21,7 @@
 		<label for="content">Content</label>
 		<input type="text" class="form-control" id="content" name="content" required />
 
-		<input type="submit" value-"Create"/>
+		<input type="submit" value="Create"/>
 	</form>
 	
 	@include('layouts.errors')
