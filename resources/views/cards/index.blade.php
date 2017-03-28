@@ -10,6 +10,7 @@
 	<?php foreach($cards as $card) : ?>
 		<div>{{ $card->title }}</div>
 		<div>{{ $card->content }}</div>
+		<div>{{ $card->created_at->diffForHumans() }}</div>
 		<br />
 	<?php endforeach; ?>
 
